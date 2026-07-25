@@ -77,3 +77,14 @@ export const LOCKUP_CONTRACTS = Object.freeze([
   "0x1A29d558eEeFA90E23a6224c51a79ff448609539",
   "0xe15f843480BAd6b9ce15338c7741ECD27335101F"
 ]);
+
+export const PUBLIC_NODE_URLS = {
+  1: "https://ethereum-rpc.publicnode.com",
+  11155111: "https://ethereum-sepolia-rpc.publicnode.com",
+  8453: "https://base-rpc.publicnode.com",
+  84532: "https://base-sepolia-rpc.publicnode.com",
+  42161: "https://arbitrum-one-rpc.publicnode.com",
+  421611: "https://arbitrum-sepolia-rpc.publicnode.com",
+  10: "https://optimism-rpc.publicnode.com",
+  137: "https://polygon-rpc.publicnode.com",
+};

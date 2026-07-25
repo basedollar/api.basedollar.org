@@ -1,12 +1,13 @@
 import type { Provider } from "@ethersproject/abstract-provider";
 import { Networkish, getNetwork } from "@ethersproject/networks";
-import { InfuraProvider } from "@ethersproject/providers";
+import { InfuraProvider, JsonRpcProvider } from "@ethersproject/providers";
 
 import { AlchemyProvider } from "./AlchemyProvider";
 import { BatchedProvider } from "./BatchedProvider";
+import { PUBLIC_NODE_URLS } from "./constants";
 
 export interface LiquityConnectionOptions {
-  provider?: "alchemy" | "infura"; // defaults to Alchemy
+  provider?: "publicnode" | "alchemy" | "infura"; // defaults to Alchemy
   alchemyApiKey?: string;
   infuraApiKey?: string;
 }
@@ -19,7 +20,9 @@ export const getProvider = (
   const underlyingProvider =
     options?.provider === "infura"
       ? new InfuraProvider(network, options?.infuraApiKey)
-      : new AlchemyProvider(network, options?.alchemyApiKey);
+      : options?.provider === "alchemy"
+      ? new AlchemyProvider(network, options?.alchemyApiKey)
+      : new JsonRpcProvider(PUBLIC_NODE_URLS[network.chainId as keyof typeof PUBLIC_NODE_URLS]);
 
   return new BatchedProvider(underlyingProvider, network);
 };
