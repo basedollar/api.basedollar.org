@@ -23,9 +23,9 @@ import {
   // DUNE_LEADERBOARD_URL_MAINNET,
   // DUNE_SPV2_AVERAGE_APY_URL_MAINNET,
   // DUNE_SPV2_UPFRONT_FEE_URL_MAINNET,
-  LQTY_CIRCULATING_SUPPLY_FILE,
+  // LQTY_CIRCULATING_SUPPLY_FILE,
   // LUSD_CB_BAMM_STATS_FILE,
-  LUSD_TOTAL_SUPPLY_FILE,
+  // LUSD_TOTAL_SUPPLY_FILE,
   OUTPUT_DIR_V1,
   OUTPUT_DIR_V2
 } from "./constants";
@@ -47,12 +47,12 @@ const duneApiKey: string = process.env.DUNE_API_KEY || panic("missing DUNE_API_K
 const coinGeckoDemoApiKey: string =
   process.env.COINGECKO_DEMO_KEY || panic("missing COINGECKO_DEMO_KEY");
 
-const lqtyCirculatingSupplyFile = path.join(OUTPUT_DIR_V1, LQTY_CIRCULATING_SUPPLY_FILE);
-const lusdTotalSupplyFile = path.join(OUTPUT_DIR_V1, LUSD_TOTAL_SUPPLY_FILE);
+// const lqtyCirculatingSupplyFile = path.join(OUTPUT_DIR_V1, LQTY_CIRCULATING_SUPPLY_FILE);
+// const lusdTotalSupplyFile = path.join(OUTPUT_DIR_V1, LUSD_TOTAL_SUPPLY_FILE);
 // const lusdCBBAMMStatsFile = path.join(OUTPUT_DIR_V1, LUSD_CB_BAMM_STATS_FILE);
 
-const mainnetProvider = getProvider("mainnet", { provider, alchemyApiKey, infuraApiKey });
-const sepoliaProvider = getProvider("sepolia", { provider, alchemyApiKey, infuraApiKey });
+// const mainnetProvider = getProvider("mainnet", { provider, alchemyApiKey, infuraApiKey });
+// const sepoliaProvider = getProvider("sepolia", { provider, alchemyApiKey, infuraApiKey });
 const baseProvider = getProvider(
   { name: "base", chainId: 8453 },
   { provider, alchemyApiKey, infuraApiKey }
@@ -144,7 +144,7 @@ export const writeTree = (parentDir: string, tree: Tree): void => {
   }
 };
 
-EthersLiquity.connect(mainnetProvider)
+EthersLiquity.connect(baseProvider)
   .then(async liquity => {
     const [
       // lqtyCirculatingSupply,
