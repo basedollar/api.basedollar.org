@@ -35,6 +35,8 @@ export const PRICES = {
   "liquity-usd": "LUSD",
   "rocket-pool-eth": "RETH",
   "wrapped-steth": "WSTETH",
+  "coinbase-wrapped-staked-eth": "CBETH",
+  "coinbase-wrapped-btc": "CBBTC",
   smardex: "SDEX"
 } as const;
 
