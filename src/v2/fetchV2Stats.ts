@@ -83,8 +83,8 @@ export const fetchV2Stats = async ({
   const SP_YIELD_SPLIT = Decimal.fromBigNumberString(deployment.constants.SP_YIELD_SPLIT);
   const contracts = getContracts(provider, deployment);
 
-  // Last step of deployment renounces Governance ownership
-  const deployed = await contracts.governance
+  // Last step of deployment renounces BoldToken ownership
+  const deployed = await contracts.boldToken
     .owner()
     .then(owner => owner == AddressZero)
     .catch(() => false);

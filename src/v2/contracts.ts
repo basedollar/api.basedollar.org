@@ -27,11 +27,13 @@ export interface LiquityV2Governance {
 }
 
 const erc20Abi = [
+  "function owner() view returns (address)",
   "function symbol() view returns (string)",
   "function totalSupply() view returns (uint256)"
 ];
 
 export interface ERC20 {
+  owner(overrides?: CallOverrides): Promise<string>;
   symbol(overrides?: CallOverrides): Promise<string>;
   totalSupply(overrides?: CallOverrides): Promise<BigNumber>;
 }
