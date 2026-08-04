@@ -33,6 +33,10 @@ import {
 // import { fetchLeaderboardFromDune } from "./v2/dune/fetchLeaderboardFromDune";
 // import { fetchDefiAvgBorrowRates } from "./v2/fetchDefiAvgBorrowRates";
 
+import dotenv from "dotenv";
+dotenv.config();
+
+
 const panic = <T>(message: string): T => {
   throw new Error(message);
 };
@@ -51,7 +55,7 @@ const coinGeckoDemoApiKey: string =
 // const lusdTotalSupplyFile = path.join(OUTPUT_DIR_V1, LUSD_TOTAL_SUPPLY_FILE);
 // const lusdCBBAMMStatsFile = path.join(OUTPUT_DIR_V1, LUSD_CB_BAMM_STATS_FILE);
 
-// const mainnetProvider = getProvider("mainnet", { provider, alchemyApiKey, infuraApiKey });
+const mainnetProvider = getProvider("mainnet", { provider, alchemyApiKey, infuraApiKey });
 // const sepoliaProvider = getProvider("sepolia", { provider, alchemyApiKey, infuraApiKey });
 const baseProvider = getProvider(
   { name: "base", chainId: 8453 },
@@ -144,7 +148,7 @@ export const writeTree = (parentDir: string, tree: Tree): void => {
   }
 };
 
-EthersLiquity.connect(baseProvider)
+EthersLiquity.connect(mainnetProvider)
   .then(async liquity => {
     const [
       // lqtyCirculatingSupply,
