@@ -89,8 +89,11 @@ export class AlchemyProvider extends UrlJsonRpcProvider {
       case "optimism-sepolia":
         host = "opt-sepolia.g.alchemy.com/v2/";
         break;
+      case "base":
+        host = "base-mainnet.g.alchemy.com/v2/";
+        break;
       default:
-        logger.throwArgumentError("unsupported network", "network", arguments[0]);
+        logger.throwArgumentError("unsupported network", "network", network);
     }
 
     return {

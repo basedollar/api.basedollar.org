@@ -12,7 +12,7 @@ export const LUSD_CB_BAMM_STATS_FILE = "lusd_cb_bamm_stats.json";
 export const SPHERE_API_STABLECOIN_BORROW_RATES_URL =
   "https://sphere-api.blockanalitica.com/stablecoin-borrow/rates/";
 
-export const COLLATERAL_TOKENS = ["WETH", "wstETH", "rETH"] as const;
+export const COLLATERAL_TOKENS = ["WETH", "wstETH", "rETH", "cbBTC", "cbETH"] as const;
 
 export const DUNE_SPV2_AVERAGE_APY_URL_MAINNET = "https://api.dune.com/api/v1/query/5162039/results";
 export const DUNE_SPV2_UPFRONT_FEE_URL_MAINNET = "https://api.dune.com/api/v1/query/5190924/results";
@@ -20,6 +20,9 @@ export const DUNE_BOLD_YIELD_OPPORTUNITIES_URL_MAINNET =
   "https://api.dune.com/api/v1/query/5662336/results";
 export const DUNE_FORK_VENUES_URL_MAINNET = "https://api.dune.com/api/v1/query/5682625/results";
 export const DUNE_LEADERBOARD_URL_MAINNET = "https://api.dune.com/api/v1/query/5245634/results";
+
+export const DUNE_SPV2_AVERAGE_APY_URL_BASE = "https://api.dune.com/api/v1/query/8224484/results";
+export const DUNE_SPV2_UPFRONT_FEE_URL_BASE = "https://api.dune.com/api/v1/query/8224743/results";
 
 export const TOTAL_LQTY_SUPPLY = Decimal.from(100e6); // 100 million
 
@@ -32,6 +35,8 @@ export const PRICES = {
   "liquity-usd": "LUSD",
   "rocket-pool-eth": "RETH",
   "wrapped-steth": "WSTETH",
+  "coinbase-wrapped-staked-eth": "CBETH",
+  "coinbase-wrapped-btc": "CBBTC",
   smardex: "SDEX"
 } as const;
 
