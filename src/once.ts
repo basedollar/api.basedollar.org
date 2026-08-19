@@ -18,6 +18,7 @@ import { fetchV2Stats } from "./v2/fetchV2Stats";
 import {
   DUNE_SPV2_AVERAGE_APY_URL_BASE,
   DUNE_SPV2_UPFRONT_FEE_URL_BASE,
+  // DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE,
   // DUNE_BOLD_YIELD_OPPORTUNITIES_URL_MAINNET,
   // DUNE_FORK_VENUES_URL_MAINNET,
   // DUNE_LEADERBOARD_URL_MAINNET,
@@ -196,10 +197,14 @@ EthersLiquity.connect(mainnetProvider)
         provider: baseProvider,
         duneSpApyUrl: DUNE_SPV2_AVERAGE_APY_URL_BASE,
         duneSpUpfrontFeeUrl: DUNE_SPV2_UPFRONT_FEE_URL_BASE,
-        duneYieldUrl: null,
+        duneYieldUrl: null, // TODO: Change to DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE
         duneApiKey
       }),
       fetchPrices({ coinGeckoDemoApiKey }),
+      // fetchBoldYieldOpportunitiesFromDune({
+      //   apiKey: duneApiKey,
+      //   url: DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE
+      // }),
       // fetchBoldYieldOpportunitiesFromDune({
       //   apiKey: duneApiKey,
       //   url: DUNE_BOLD_YIELD_OPPORTUNITIES_URL_MAINNET
