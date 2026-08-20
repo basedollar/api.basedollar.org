@@ -1,0 +1,102 @@
+[
+  {
+    "time": "2026-08-20 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": 987.9777522053563,
+    "daily_apr": 987.9777522053563,
+    "weekly_apr": 987.9777522053563,
+    "_30d_apr": 987.9777522053563,
+    "_90d_apr": 987.9777522053563,
+    "tvl": 21025.001963899856
+  },
+  {
+    "time": "2026-08-19 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 15424.428010111835
+  },
+  {
+    "time": "2026-08-18 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 42029.01072625286
+  },
+  {
+    "time": "2026-08-17 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 41792.13387673914
+  },
+  {
+    "time": "2026-08-16 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 43240.01812630288
+  },
+  {
+    "time": "2026-08-15 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 42588.74646938869
+  },
+  {
+    "time": "2026-08-14 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 42550.122793628194
+  },
+  {
+    "time": "2026-08-13 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 42488.84861728173
+  },
+  {
+    "time": "2026-08-12 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 44058.80472418734
+  },
+  {
+    "time": "2026-08-11 00:00:00",
+    "yield_name": "10. BD/USDC LP APR (%) Aerodrome Base",
+    "apr": null,
+    "daily_apr": null,
+    "weekly_apr": null,
+    "_30d_apr": null,
+    "_90d_apr": null,
+    "tvl": 40333.65559513591
+  }
+]

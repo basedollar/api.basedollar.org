@@ -25,6 +25,8 @@ export const DUNE_SPV2_AVERAGE_APY_URL_BASE = "https://api.dune.com/api/v1/query
 export const DUNE_SPV2_UPFRONT_FEE_URL_BASE = "https://api.dune.com/api/v1/query/8224743/results";
 export const DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE = "https://api.dune.com/api/v1/query/8383410/results";
 
+export const DUNE_BD_USDC_AERODROME_YIELD_URL_BASE = "https://api.dune.com/api/v1/query/8388513/results";
+
 export const TOTAL_LQTY_SUPPLY = Decimal.from(100e6); // 100 million
 
 // { [coinGeckoId]: symbol }

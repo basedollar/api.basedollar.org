@@ -13,9 +13,10 @@ import { getProvider } from "./connection";
 // import { fetchLUSDTotalSupply } from "./fetchLUSDTotalSupply";
 import { fetchPrices } from "./fetchPrices";
 import { fetchV2Stats } from "./v2/fetchV2Stats";
-// import { fetchBoldYieldOpportunitiesFromDune } from "./v2/dune/fetchBoldYieldOpportunitiesFromDune";
+import { fetchBdUsdcAerodromeYieldFromDune } from "./v2/dune/fetchBdUsdcAerodromeYieldFromDune";
 
 import {
+  DUNE_BD_USDC_AERODROME_YIELD_URL_BASE,
   DUNE_SPV2_AVERAGE_APY_URL_BASE,
   DUNE_SPV2_UPFRONT_FEE_URL_BASE,
   // DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE,
@@ -160,6 +161,7 @@ EthersLiquity.connect(mainnetProvider)
       // v2SepoliaStats,
       v2BaseStats,
       prices,
+      bdUsdcAerodromeYield,
       // boldVenues,
       // forkVenues,
       // leaderboard,
@@ -201,6 +203,10 @@ EthersLiquity.connect(mainnetProvider)
         duneApiKey
       }),
       fetchPrices({ coinGeckoDemoApiKey }),
+      fetchBdUsdcAerodromeYieldFromDune({
+        apiKey: duneApiKey,
+        url: DUNE_BD_USDC_AERODROME_YIELD_URL_BASE
+      }),
       // fetchBoldYieldOpportunitiesFromDune({
       //   apiKey: duneApiKey,
       //   url: DUNE_BD_YIELD_OPPORTUNITIES_URL_BASE
@@ -259,6 +265,10 @@ EthersLiquity.connect(mainnetProvider)
     //   JSON.stringify({ ...v2SepoliaStats, prices }, null, 2)
     // );
 
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR_V2, "bd-usdc-aerodrome-yield.json"),
+      JSON.stringify(bdUsdcAerodromeYield, null, 2)
+    );
     fs.mkdirSync(path.join(OUTPUT_DIR_V2, "website"), { recursive: true });
     // fs.writeFileSync(
     //   path.join(OUTPUT_DIR_V2, "website", "bold-venues.json"),
