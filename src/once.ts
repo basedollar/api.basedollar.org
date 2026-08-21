@@ -292,6 +292,7 @@ EthersLiquity.connect(mainnetProvider)
     // console.log("LUSD CB BAMM stats:", lusdCBBAMMStats);
     console.log();
     console.log("v2 stats:", util.inspect(v2Stats, { colors: true, depth: null }));
+    console.log("aerodrome yield:", util.inspect(bdUsdcAerodromeYield?.[0] ?? {}, { colors: true, depth: null }));
   })
   .catch(error => {
     console.error(error);
